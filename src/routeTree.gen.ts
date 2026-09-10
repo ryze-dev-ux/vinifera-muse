@@ -10,33 +10,63 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiAuthRouteImport } from './routes/api/auth'
+import { Route as ApiGdriveRouteImport } from './routes/api/gdrive'
+import { Route as ApiWinesDbRouteImport } from './routes/api/wines-db'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiAuthRoute = ApiAuthRouteImport.update({
+  id: '/api/auth',
+  path: '/api/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiGdriveRoute = ApiGdriveRouteImport.update({
+  id: '/api/gdrive',
+  path: '/api/gdrive',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiWinesDbRoute = ApiWinesDbRouteImport.update({
+  id: '/api/wines-db',
+  path: '/api/wines-db',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/api/auth': typeof ApiAuthRoute
+  '/api/gdrive': typeof ApiGdriveRoute
+  '/api/wines-db': typeof ApiWinesDbRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/api/auth': typeof ApiAuthRoute
+  '/api/gdrive': typeof ApiGdriveRoute
+  '/api/wines-db': typeof ApiWinesDbRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/api/auth': typeof ApiAuthRoute
+  '/api/gdrive': typeof ApiGdriveRoute
+  '/api/wines-db': typeof ApiWinesDbRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/api/auth' | '/api/gdrive' | '/api/wines-db'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/api/auth' | '/api/gdrive' | '/api/wines-db'
+  id: '__root__' | '/' | '/api/auth' | '/api/gdrive' | '/api/wines-db'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ApiAuthRoute: typeof ApiAuthRoute
+  ApiGdriveRoute: typeof ApiGdriveRoute
+  ApiWinesDbRoute: typeof ApiWinesDbRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +78,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/auth': {
+      id: '/api/auth'
+      path: '/api/auth'
+      fullPath: '/api/auth'
+      preLoaderRoute: typeof ApiAuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/gdrive': {
+      id: '/api/gdrive'
+      path: '/api/gdrive'
+      fullPath: '/api/gdrive'
+      preLoaderRoute: typeof ApiGdriveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/wines-db': {
+      id: '/api/wines-db'
+      path: '/api/wines-db'
+      fullPath: '/api/wines-db'
+      preLoaderRoute: typeof ApiWinesDbRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ApiAuthRoute: ApiAuthRoute,
+  ApiGdriveRoute: ApiGdriveRoute,
+  ApiWinesDbRoute: ApiWinesDbRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
