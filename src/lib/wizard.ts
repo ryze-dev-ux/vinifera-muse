@@ -44,10 +44,10 @@ export interface Wine {
 export interface WizardAnswers {
   price?: WineOption;
   tipo?: string;
-  estilo?: string;
-  uva?: string;
-  pais?: string;
-  harmonizacao?: string;
+  estilo?: string | undefined;
+  uva?: string | undefined;
+  pais?: string | undefined;
+  harmonizacao?: string | undefined;
 }
 
 /* ── Etapas base (compartilhadas) ─────────────────────────────────── */
