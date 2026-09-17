@@ -207,17 +207,10 @@ function Opener({
 }) {
   return (
     <section className="pt-16 pb-20 text-center sm:pt-24 sm:pb-28">
-      <p className="mb-6 text-[11px] uppercase tracking-[0.35em] text-accent">
-        Jornada guiada
-      </p>
       <h1 className="mx-auto max-w-[720px] font-serif text-5xl leading-[1.02] tracking-tight text-balance sm:text-6xl md:text-7xl">
         Encontre seu próximo{" "}
         <em className="not-italic text-accent">rótulo</em>
       </h1>
-      <p className="mx-auto mt-6 max-w-[460px] text-[15px] leading-relaxed text-muted-foreground">
-        Responda a poucas perguntas. Nosso sommelier digital cruza suas
-        preferências com o acervo do Empório Cosmopolita.
-      </p>
 
       <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
         <button
@@ -234,24 +227,6 @@ function Opener({
             Carregando acervo…
           </span>
         )}
-      </div>
-
-      <div className="mx-auto mt-16 grid max-w-[720px] grid-cols-3 gap-px border border-foreground/10 bg-foreground/10">
-        {[
-          ["Perguntas", "5–6 etapas"],
-          ["Filtros", "Preço, tipo, uva, país, harmonização"],
-          ["Resultado", "Rótulos reais do acervo"],
-        ].map(([label, value]) => (
-          <div
-            key={label}
-            className="bg-background p-4 text-center sm:p-6"
-          >
-            <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-              {label}
-            </p>
-            <p className="mt-1 text-sm font-medium">{value}</p>
-          </div>
-        ))}
       </div>
     </section>
   );
