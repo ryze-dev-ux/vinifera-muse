@@ -196,19 +196,6 @@ function Header() {
   );
 }
 
-/* ── Rodapé ────────────────────────────────────────────────────────── */
-function Footer() {
-  return (
-    <footer className="border-t border-foreground/10">
-      <div className="mx-auto flex max-w-[960px] items-center justify-between px-6 py-8">
-        <span className="font-serif text-lg">Cosmos</span>
-        <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-          Empório Cosmopolita
-        </span>
-      </div>
-    </footer>
-  );
-}
 
 /* ── Tela inicial ──────────────────────────────────────────────────── */
 function Opener({
