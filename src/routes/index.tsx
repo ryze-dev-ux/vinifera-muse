@@ -211,10 +211,6 @@ function Opener({
         Encontre seu próximo{" "}
         <em className="not-italic text-accent">rótulo</em>
       </h1>
-      <p className="mx-auto mt-6 max-w-[460px] text-[15px] leading-relaxed text-muted-foreground">
-        Responda a poucas perguntas. Nosso sommelier digital cruza suas
-        preferências com o acervo do Empório Cosmopolita.
-      </p>
 
       <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
         <button
