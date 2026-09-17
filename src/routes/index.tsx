@@ -190,7 +190,7 @@ function Header() {
   return (
     <header className="border-b border-foreground/10">
       <div className="mx-auto flex max-w-[960px] items-center justify-between px-6 py-6">
-        <span className="font-serif text-2xl tracking-tight">Cosmos</span>
+        <span className="font-display text-[1.45rem] font-medium tracking-tight text-primary">Cosmos</span>
       </div>
     </header>
   );
