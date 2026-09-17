@@ -192,15 +192,7 @@ function Header() {
   return (
     <header className="border-b border-foreground/10">
       <div className="mx-auto flex max-w-[960px] items-center justify-between px-6 py-6">
-        <div className="flex items-baseline gap-3">
-          <span className="font-serif text-2xl tracking-tight">Cosmos</span>
-          <span className="hidden text-[11px] uppercase tracking-[0.28em] text-muted-foreground sm:inline">
-            Empório Cosmopolita
-          </span>
-        </div>
-        <span className="text-xs tracking-wide text-muted-foreground">
-          Sommelier digital
-        </span>
+        <span className="font-serif text-2xl tracking-tight">Cosmos</span>
       </div>
     </header>
   );
@@ -507,10 +499,7 @@ function Results({
   if (wines.length === 0) {
     return (
       <section className="py-24 text-center">
-        <p className="text-[11px] uppercase tracking-[0.35em] text-accent">
-          Resultado
-        </p>
-        <h2 className="mt-4 font-serif text-3xl tracking-tight sm:text-4xl">
+        <h2 className="font-serif text-3xl tracking-tight sm:text-4xl">
           Nenhum rótulo encontrado
         </h2>
         <p className="mx-auto mt-3 max-w-md text-sm text-muted-foreground">
