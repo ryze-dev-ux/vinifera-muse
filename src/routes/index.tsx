@@ -180,9 +180,6 @@ function Index() {
             onRestart={restart}
           />
         )}
-      </main>
-
-      <Footer />
     </div>
   );
 }
