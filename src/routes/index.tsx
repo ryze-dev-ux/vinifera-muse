@@ -207,9 +207,6 @@ function Opener({
 }) {
   return (
     <section className="pt-16 pb-20 text-center sm:pt-24 sm:pb-28">
-      <p className="mb-6 text-[11px] uppercase tracking-[0.35em] text-accent">
-        Jornada guiada
-      </p>
       <h1 className="mx-auto max-w-[720px] font-serif text-5xl leading-[1.02] tracking-tight text-balance sm:text-6xl md:text-7xl">
         Encontre seu próximo{" "}
         <em className="not-italic text-accent">rótulo</em>
