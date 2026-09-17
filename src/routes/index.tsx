@@ -228,24 +228,6 @@ function Opener({
           </span>
         )}
       </div>
-
-      <div className="mx-auto mt-16 grid max-w-[720px] grid-cols-3 gap-px border border-foreground/10 bg-foreground/10">
-        {[
-          ["Perguntas", "5–6 etapas"],
-          ["Filtros", "Preço, tipo, uva, país, harmonização"],
-          ["Resultado", "Rótulos reais do acervo"],
-        ].map(([label, value]) => (
-          <div
-            key={label}
-            className="bg-background p-4 text-center sm:p-6"
-          >
-            <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-              {label}
-            </p>
-            <p className="mt-1 text-sm font-medium">{value}</p>
-          </div>
-        ))}
-      </div>
     </section>
   );
 }
