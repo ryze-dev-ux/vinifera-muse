@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import {
   type Wine,
   type WizardAnswers,
-  type WizardOption,
+  type WineOption,
   type WizardStep,
   finishWizard,
   fmtPrice,
@@ -105,7 +105,7 @@ function Index() {
     mainRef.current?.scrollIntoView({ behavior: "smooth" });
   }
 
-  function selectOption(option: WizardOption) {
+  function selectOption(option: WineOption) {
     if (!currentStep) return;
     const key = currentStep.key as keyof WizardAnswers;
     const nextAnswers: WizardAnswers =
@@ -285,7 +285,7 @@ function Wizard({
   totalSteps: number;
   step: WizardStep;
   answers: WizardAnswers;
-  onSelect: (option: WizardOption) => void;
+  onSelect: (option: WineOption) => void;
   onBack: () => void;
 }) {
   const selectedValue = getSelectedValue(step.key, answers);
