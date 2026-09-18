@@ -277,9 +277,9 @@ function Wizard({
 
       {/* Pergunta */}
       <div className="mb-2 text-center">
-        <p className="text-[11px] uppercase tracking-[0.35em] text-accent">
-          {flowLabel} · Etapa {stepNumber}
-        </p>
+          <p className="text-[11px] uppercase tracking-[0.35em] text-accent">
+            Etapa {stepNumber}
+          </p>
         <h2 className="mt-5 font-serif text-4xl leading-[1.05] tracking-tight text-balance sm:text-5xl md:text-6xl">
           {step.label}
         </h2>
